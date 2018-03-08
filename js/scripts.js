@@ -16,7 +16,7 @@ pickScissors.addEventListener('click', function () {
     playerPick('scissors');
 });
 
-var gameState = 'notStarted',  //started // ended
+var gameState = 'started',  //started // ended
     player = {
         name: '',
         score: 0
@@ -119,4 +119,10 @@ function playerPick(playerPick) {
 
     checkRoundWinner(playerPick, computerPick);
 }
+
+function setGamePoints() {
+    playerPointsElem.innerHTML = player.score;
+    computerPointsElem.innerHTML = computer.score;
+}
+
 setGameElements();
